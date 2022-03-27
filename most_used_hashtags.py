@@ -10,4 +10,7 @@ def most_used_hashtags(tweets):
 
 
     sorted_hashtags = sorted(hashtags.items(), key=lambda x: x[1], reverse=True)
-    return sorted_hashtags[:10]
+    
+    print('10 hashtags mas usados:')
+    for hashtag in sorted_hashtags[:10]: 
+        print(f'{hashtag[0]} con {hashtag[1]} hashtags')

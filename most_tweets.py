@@ -7,4 +7,7 @@ def more_tweets(tweets):
             users[tweet['user']['username']] += 1
 
     sorted_users = sorted(users.items(), key=lambda x: x[1], reverse=True)
-    return sorted_users[:10]
+    
+    print('10 usuarios con mas tweets:')
+    for user in sorted_users[:10]: 
+        print(f'{user[0]} con {user[1]} tweets')

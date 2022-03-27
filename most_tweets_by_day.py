@@ -7,4 +7,7 @@ def most_tweets_by_day(tweets):
         else:
             days[date] += 1
     sorted_days = sorted(days.items(), key=lambda x: x[1], reverse=True)
-    return sorted_days[:10]
+    
+    print('10 dias con mas tweets:')
+    for day in sorted_days[:10]: 
+        print(f'{day[0]} con {day[1]} tweets')
